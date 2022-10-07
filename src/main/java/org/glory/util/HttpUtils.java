@@ -14,7 +14,7 @@ import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.util.EntityUtils;
 
-public class HttpUtil {
+public class HttpUtils {
 
     private static final int CONNECTION_REQUEST_TIMEOUT = 10000;
     private static final int CONNECT_TIMEOUT = 10000;
@@ -44,7 +44,7 @@ public class HttpUtil {
         HttpResponse httpResponse = httpClient.execute(httpGet);
 
         String resultJson = EntityUtils.toString(httpResponse.getEntity());
-        System.out.println(resultJson);
+//        System.out.println(resultJson);
 
         return resultJson;
     }
@@ -74,7 +74,7 @@ public class HttpUtil {
         HttpResponse httpResponse = httpClient.execute(httpPost);
 
         String resultJson = EntityUtils.toString(httpResponse.getEntity());
-        System.out.println(resultJson);
+//        System.out.println(resultJson);
 
         return resultJson;
     }
@@ -109,7 +109,7 @@ public class HttpUtil {
         HttpResponse httpResponse = httpClient.execute(httpPost);
 
         String resultJson = EntityUtils.toString(httpResponse.getEntity());
-        System.out.println(resultJson);
+//        System.out.println(resultJson);
 
         return resultJson;
     }

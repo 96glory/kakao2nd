@@ -1,14 +1,11 @@
 package org.glory;
 
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
+import static org.glory.util.GsonUtils.getListFromJsonString;
+
 import java.io.IOException;
-import java.lang.reflect.Type;
-import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 import org.glory.model.TestVO;
-import org.glory.util.HttpUtil;
+import org.glory.util.HttpUtils;
 
 public class Main {
 
@@ -16,13 +13,9 @@ public class Main {
         System.out.println("Hello world!");
 
         try {
-            String s = HttpUtil.get("https://jsonplaceholder.typicode.com/posts");
+            String jsonString = HttpUtils.get("http://jsonplaceholder.typicode.com/posts");
 
-            // https://hianna.tistory.com/629
-            // https://howtodoinjava.com/gson/gson-parse-json-array/
-            Gson testGson = new Gson();
-            Type listType = new TypeToken<ArrayList<TestVO>>(){}.getType();
-            List<TestVO> testVOs = testGson.fromJson(s, listType);
+            List<TestVO> testVOs = getListFromJsonString(jsonString, TestVO[].class);
 
             testVOs.forEach(System.out::println);
 
@@ -30,4 +23,5 @@ public class Main {
             e.printStackTrace();
         }
     }
+
 }

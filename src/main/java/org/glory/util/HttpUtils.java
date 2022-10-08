@@ -23,6 +23,10 @@ public class HttpUtils {
     public static String get(String uriString) throws IOException {
         HttpGet httpGet = new HttpGet();
 
+        System.out.println("===========================");
+        System.out.println("HttpUtils.get uriString = " + uriString);
+        System.out.println("===========================");
+
         httpGet.addHeader("Accept", "application/json");
         httpGet.addHeader("Content-Type", "application/json");
 
@@ -51,6 +55,11 @@ public class HttpUtils {
 
     public static String post(String uriString, String body) throws IOException {
         HttpPost httpPost = new HttpPost();
+
+        System.out.println("===========================");
+        System.out.println("HttpUtils.post uriString = " + uriString);
+        System.out.println("HttpUtils.post body = " + body);
+        System.out.println("===========================");
 
         httpPost.addHeader("Accept", "application/json");
         httpPost.addHeader("Content-Type", "application/json");
@@ -82,6 +91,12 @@ public class HttpUtils {
     public static String post(String uriString, String body, Map<String, String> headerMap)
         throws IOException {
         HttpPost httpPost = new HttpPost();
+
+        System.out.println("===========================");
+        System.out.println("HttpUtils.post uriString = " + uriString);
+        System.out.println("HttpUtils.post body = " + body);
+        System.out.println("HttpUtils.post headerMap = " + headerMap);
+        System.out.println("===========================");
 
         httpPost.addHeader("Accept", "application/json");
         httpPost.addHeader("Content-Type", "application/json");

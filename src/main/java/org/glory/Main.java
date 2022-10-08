@@ -13,8 +13,6 @@ import org.glory.util.HttpUtils;
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println("Hello world!");
-
 //        JsonObject jsonObject = new JsonObject();
 //        jsonObject.addProperty("name", "glory");
 //        jsonObject.addProperty("id", 1);

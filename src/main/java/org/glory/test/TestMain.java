@@ -1,16 +1,14 @@
-package org.glory;
+package org.glory.test;
 
-import static org.glory.util.GsonUtils.getJsonStringFromObject;
 import static org.glory.util.GsonUtils.getListFromJsonString;
 
-import com.google.gson.JsonObject;
 import java.io.IOException;
 import java.util.List;
-import org.glory.model.TestVO;
-import org.glory.model.UserTestVO;
+import org.glory.test.model.TestVO;
+import org.glory.test.model.UserTestVO;
 import org.glory.util.HttpUtils;
 
-public class Main {
+public class TestMain {
 
     public static void main(String[] args) {
 //        JsonObject jsonObject = new JsonObject();

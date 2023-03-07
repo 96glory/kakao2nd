@@ -1,8 +1,6 @@
 package org.glory.util;
 
 import com.google.gson.Gson;
-import com.google.gson.JsonObject;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -13,6 +11,10 @@ public class GsonUtils {
 
     public static String getJsonStringFromObject(Object object) {
         return new Gson().toJson(object);
+    }
+
+    public static <T> T getObjectFromJsonString(String jsonString, Class<T> clazz) {
+        return new Gson().fromJson(jsonString, clazz);
     }
 
     public static <T> List<T> getListFromJsonString(String jsonString, Class<T[]> clazz) {
